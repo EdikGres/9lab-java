@@ -38,9 +38,9 @@ class ResourceA{
     ResourceB resourceB;
     public synchronized int getI(){
         //удивительно, что компилятор жабы не оптимизирует цикл)0))0))
-        for (int i = 0; i < 10000; i++){
-//            System.out.println(i);
-        }
+//        for (int i = 0; i < 10000; i++){
+////            System.out.println(i);
+//        }
         return resourceB.returnI();
     }
     public synchronized int returnI(){
@@ -53,9 +53,9 @@ class ResourceA{
 class ResourceB{
     ResourceA resourceA;
     public synchronized int getI(){
-        for (int i = 0; i < 10000; i++){
-//            System.out.println(i);
-        }
+//        for (int i = 0; i < 10000; i++){
+////            System.out.println(i);
+//        }
         return resourceA.returnI();
     }
     public synchronized int returnI(){
